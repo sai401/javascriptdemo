@@ -1,3 +1,5 @@
+var myScript = myScript != undefined ? myScript : {};
+myScript.teamA = myScript.teamA != undefined ? teamA : {};
 document.getElementById("demo").innerHTML = "Hello JavaScript!";
 var num1 = "jhon";
 var num2 = 12 + 10;
@@ -86,3 +88,41 @@ var reduceRes = reduceArr.reduce(function(sum, value) {
 }, 5);
 
 console.log("sum result:" + reduceRes);
+
+//substring
+var subStringStr = "saikietece@gmail.com";
+var subStringRes1 = subStringStr.substring(0, 5);
+var subStringRes2 = subStringStr.substring(3);
+var subStringRes3 = subStringStr.substring(6, 2);
+var subStringRes4 = subStringStr.substring(-4);
+console.log("substring:" + subStringRes1);
+console.log("substring:" + subStringRes2);
+console.log("substring:" + subStringRes3);
+console.log("substring:" + subStringRes4);
+
+//substr
+var subStrStringRes = "saikietece@gmail.com81234";
+var subStrStringRes1 = subStrStringRes.substr(0, 5);
+var subStrStringRes2 = subStrStringRes.substr(3);
+var subStrStringRes3 = subStrStringRes.substr(6, 4);
+var subStrStringRes4 = subStrStringRes.substr(-4, 3);
+console.log("substr:" + subStrStringRes1);
+console.log("substr:" + subStrStringRes2);
+console.log("substr:" + subStrStringRes3);
+console.log("substr:" + subStrStringRes4);
+
+//slice
+var sliceString = "saikietece@gmail.com";
+var sliceStringRes1 = sliceString.slice(0, 5);
+var sliceStringRes2 = sliceString.slice(3);
+var sliceStringRes3 = sliceString.slice(6, 2);
+var sliceStringRes4 = sliceString.slice(-4, -2);
+console.log("slice:" + sliceStringRes1);
+console.log("slice:" + sliceStringRes2);
+console.log("slice:" + sliceStringRes3);
+console.log("slice:" + sliceStringRes4);
+
+//add function
+myScript.teamA.add = function(a, b) {
+  return a + b;
+};
